@@ -64,11 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				adequa: {
-					primary: '#1a56db',
-					secondary: '#0e7490',
-					accent: '#0284c7',
-					light: '#e0f2fe',
-					dark: '#0c4a6e'
+					primary: '#20604f',
+					secondary: '#5dc1ae',
+					accent: '#87d5c7',
+					light: '#e0f7f5',
+					dark: '#154038'
 				}
 			},
 			borderRadius: {

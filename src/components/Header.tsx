@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,14 +11,14 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <span className="text-2xl font-bold text-adequa-primary">Adequa</span>
             <span className="text-2xl font-bold text-adequa-secondary">Contabilidade</span>
-          </a>
+          </Link>
         </div>
         
         <nav className="hidden lg:flex items-center space-x-8">
-          <a href="/" className="text-gray-700 hover:text-adequa-primary font-medium">Início</a>
+          <Link to="/" className="text-gray-700 hover:text-adequa-primary font-medium">Início</Link>
           
           <div className="relative group">
             <button 
@@ -34,9 +35,10 @@ const Header = () => {
             </div>
           </div>
           
-          <a href="#sobre" className="text-gray-700 hover:text-adequa-primary font-medium">Sobre Nós</a>
+          <Link to="/empresa" className="text-gray-700 hover:text-adequa-primary font-medium">Sobre Nós</Link>
           <a href="#depoimentos" className="text-gray-700 hover:text-adequa-primary font-medium">Depoimentos</a>
           <a href="#contato" className="text-gray-700 hover:text-adequa-primary font-medium">Contato</a>
+          <Link to="/lgpd" className="text-gray-700 hover:text-adequa-primary font-medium">LGPD</Link>
         </nav>
         
         <a href="#contato" className="hidden lg:inline-block btn-primary">
@@ -54,7 +56,7 @@ const Header = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="lg:hidden bg-white px-4 pt-2 pb-4 shadow-lg">
-          <a href="/" className="block py-2 text-gray-700 font-medium">Início</a>
+          <Link to="/" className="block py-2 text-gray-700 font-medium" onClick={() => setIsMenuOpen(false)}>Início</Link>
           
           <div>
             <button 
@@ -67,19 +69,20 @@ const Header = () => {
             
             {isServicesOpen && (
               <div className="pl-4 space-y-2">
-                <a href="#contabil" className="block py-2 text-sm text-gray-700">Contabilidade</a>
-                <a href="#fiscal" className="block py-2 text-sm text-gray-700">Fiscal</a>
-                <a href="#departamento-pessoal" className="block py-2 text-sm text-gray-700">Departamento Pessoal</a>
-                <a href="#consultoria" className="block py-2 text-sm text-gray-700">Consultoria Empresarial</a>
+                <a href="#contabil" className="block py-2 text-sm text-gray-700" onClick={() => setIsMenuOpen(false)}>Contabilidade</a>
+                <a href="#fiscal" className="block py-2 text-sm text-gray-700" onClick={() => setIsMenuOpen(false)}>Fiscal</a>
+                <a href="#departamento-pessoal" className="block py-2 text-sm text-gray-700" onClick={() => setIsMenuOpen(false)}>Departamento Pessoal</a>
+                <a href="#consultoria" className="block py-2 text-sm text-gray-700" onClick={() => setIsMenuOpen(false)}>Consultoria Empresarial</a>
               </div>
             )}
           </div>
           
-          <a href="#sobre" className="block py-2 text-gray-700 font-medium">Sobre Nós</a>
-          <a href="#depoimentos" className="block py-2 text-gray-700 font-medium">Depoimentos</a>
-          <a href="#contato" className="block py-2 text-gray-700 font-medium">Contato</a>
+          <Link to="/empresa" className="block py-2 text-gray-700 font-medium" onClick={() => setIsMenuOpen(false)}>Sobre Nós</Link>
+          <a href="#depoimentos" className="block py-2 text-gray-700 font-medium" onClick={() => setIsMenuOpen(false)}>Depoimentos</a>
+          <a href="#contato" className="block py-2 text-gray-700 font-medium" onClick={() => setIsMenuOpen(false)}>Contato</a>
+          <Link to="/lgpd" className="block py-2 text-gray-700 font-medium" onClick={() => setIsMenuOpen(false)}>LGPD</Link>
           
-          <a href="#contato" className="mt-4 block btn-primary text-center">
+          <a href="#contato" className="mt-4 block btn-primary text-center" onClick={() => setIsMenuOpen(false)}>
             Fale Conosco
           </a>
         </div>
