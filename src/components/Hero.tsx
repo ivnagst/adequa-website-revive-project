@@ -11,6 +11,15 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+            {/* Logo */}
+            <div className="mb-6 flex justify-center md:justify-start">
+              <img 
+                src="/lovable-uploads/90d1a31e-5eda-4a11-af17-3cc055f4a587.png" 
+                alt="Adequa Contabilidade Logo" 
+                className="h-16 md:h-20"
+              />
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               Contabilidade que se <span className="text-adequa-light">adequa</span> ao seu negócio
             </h1>
@@ -38,26 +47,23 @@ const Hero = () => {
                   alt="Equipe de contabilidade profissional"
                   className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
                 />
+                
+                {/* Overlay on image */}
                 <div className="absolute inset-0 bg-gradient-to-t from-adequa-primary/60 to-transparent rounded-lg"></div>
-              </div>
-              
-              {/* Floating promo card */}
-              <div className="absolute -bottom-6 -right-6 bg-white p-5 rounded-xl shadow-xl border border-adequa-light/20 max-w-xs transform rotate-2 animate-float">
-                <div className="text-center">
-                  <div className="text-adequa-primary mb-2 flex justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-bold text-adequa-dark mb-1">Primeira Consulta Gratuita</h3>
-                  <p className="text-gray-600 text-sm mb-3">
+                
+                {/* Promotional text directly on image */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
+                  <h3 className="text-xl font-bold text-white mb-2">Primeira Consulta Gratuita</h3>
+                  <p className="text-white/90 mb-4 text-sm md:text-base">
                     Análise personalizada para seu negócio
                   </p>
-                  <a href="#contato" className="inline-block bg-adequa-primary text-white font-medium px-4 py-2 rounded-lg hover:bg-adequa-dark transition-colors duration-300 text-sm">
+                  <a href="#contato" className="inline-block bg-white text-adequa-primary font-medium px-4 py-2 rounded-lg hover:bg-adequa-light transition-colors duration-300 text-sm">
                     Agendar Agora
                   </a>
                 </div>
               </div>
+              
+              {/* Floating element removed as the promo is now directly on the image */}
             </div>
           </div>
         </div>
