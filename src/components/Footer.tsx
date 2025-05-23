@@ -95,9 +95,6 @@ const Footer = () => {
                 LGPD
               </Link>
               <span className="text-gray-700">|</span>
-              <p className="text-gray-400 text-sm">
-                Desenvolvido com ❤️ por <a href="#" className="text-adequa-accent hover:underline">Lovable</a>
-              </p>
             </div>
           </div>
         </div>
